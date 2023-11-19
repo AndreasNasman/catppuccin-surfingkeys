@@ -1,5 +1,3 @@
-# Dracula theme for Surfingkeys
-
 # Setup
 
 1. Open Surfingkey settings.
