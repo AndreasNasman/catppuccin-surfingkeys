@@ -10,6 +10,9 @@ api.iunmap("<Ctrl-i>");
 /* Order: left-right hand, inside-out, home-bottom-top-row. */
 api.Hints.setCharacters("fdsajklghvcxzmbnuioprewqty");
 
+/* Always use the omnibar when switching tabs. */
+settings.tabsThreshold = 0;
+
 settings.theme = `
 :root {
   --dracula-background: #282a36;
