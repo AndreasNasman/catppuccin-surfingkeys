@@ -31,7 +31,7 @@ settings.theme = `
 .sk_theme {
   background-color: var(--dracula-background);
   color: var(--dracula-foreground);
-  font-family: "Cascadia Code";
+  font-family: "JetBrains Mono";
 }
 
 .sk_theme input {
