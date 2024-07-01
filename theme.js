@@ -2,9 +2,6 @@
 api.unmap("<Ctrl-i>");
 api.iunmap("<Ctrl-i>");
 
-/* Unmap vim-like marks. */
-api.unmap("m");
-
 /* Unmap emoji completion in insert mode. */
 api.iunmap(":");
 
