@@ -1,11 +1,12 @@
+/* Unmap the Ace Vim editor. */
+api.unmap("<Ctrl-i>");
+api.iunmap("<Ctrl-i>");
+
 /* Unmap vim-like marks. */
 api.unmap("m");
 
 /* Unmap emoji completion in insert mode. */
 api.iunmap(":");
-
-/* Unmap the Ace Vim editor. */
-api.iunmap("<Ctrl-i>");
 
 /* Order: left-right hand, inside-out, home-bottom-top-row. */
 api.Hints.setCharacters("fdsajklghvcxzmbnuioprewqty");
