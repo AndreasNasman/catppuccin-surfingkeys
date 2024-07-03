@@ -8,37 +8,63 @@ api.iunmap(":");
 /* Order: left-right hand, inside-out, home-bottom-top-row. */
 api.Hints.setCharacters("fdsajklghvcxzmbnuioprewqty");
 
+const Catppuccin = {
+  Base: "#1e1e2e",
+  Blue: "#89b4fa",
+  Crust: "#11111b",
+  Flamingo: "#f2cdcd",
+  Green: "#a6e3a1",
+  Lavender: "#b4befe",
+  Mantle: "#181825",
+  Maroon: "#eba0ac",
+  Mauve: "#cba6f7",
+  Overlay0: "#6c7086",
+  Overlay1: "#7f849c",
+  Overlay2: "#9399b2",
+  Peach: "#fab387",
+  Pink: "#f5c2e7",
+  Red: "#f38ba8",
+  Rosewater: "#f5e0dc",
+  Sapphire: "#74c7ec",
+  Sky: "#89dceb",
+  Subtext0: "#a6adc8",
+  Subtext1: "#bac2de",
+  Surface0: "#313244",
+  Surface1: "#45475a",
+  Surface2: "#585b70",
+  Teal: "#94e2d5",
+  Text: "#cdd6f4",
+  Yellow: "#f9e2af",
+};
+
+// https://github.com/brookhong/Surfingkeys/blob/master/docs/API.md#visualstyle
+api.Visual.style("marks", `background-color: ${Catppuccin.Sapphire};`);
+api.Visual.style("cursor", `background-color: ${Catppuccin.Blue};`);
+
+// https://github.com/brookhong/Surfingkeys/blob/master/docs/API.md#hintsstyle
+const styles = `
+  background: ${Catppuccin.Red} none;
+  border: solid 1px ${Catppuccin.Maroon};
+  color: ${Catppuccin.Crust};
+  font-family: "JetBrains Mono";
+  padding: 2px;
+  text-transform: lowercase;
+`;
+api.Hints.style(styles);
+api.Hints.style(
+  `div { ${styles} }
+   div.begin { color: ${Catppuccin.Crust}; }`,
+  "text",
+);
+
 /* Always use the omnibar when switching tabs. */
 settings.tabsThreshold = 0;
 
 settings.theme = `
 :root {
-  --catppuccin-base: #1e1e2e;
-  --catppuccin-blue: #89b4fa;
-  --catppuccin-crust: #11111b;
-  --catppuccin-flamingo: #f2cdcd;
-  --catppuccin-green: #a6e3a1;
-  --catppuccin-lavender: #b4befe;
-  --catppuccin-mantle: #181825;
-  --catppuccin-maroon: #eba0ac;
-  --catppuccin-mauve: #cba6f7;
-  --catppuccin-overlay0: #6c7086;
-  --catppuccin-overlay1: #7f849c;
-  --catppuccin-overlay2: #9399b2;
-  --catppuccin-peach: #fab387;
-  --catppuccin-pink: #f5c2e7;
-  --catppuccin-red: #f38ba8;
-  --catppuccin-rosewater: #f5e0dc;
-  --catppuccin-sapphire: #74c7ec;
-  --catppuccin-sky: #89dceb;
-  --catppuccin-subtext0: #a6adc8;
-  --catppuccin-subtext1: #bac2de;
-  --catppuccin-surface0: #313244;
-  --catppuccin-surface1: #45475a;
-  --catppuccin-surface2: #585b70;
-  --catppuccin-teal: #94e2d5;
-  --catppuccin-text: #cdd6f4;
-  --catppuccin-yellow: #f9e2af;
+  ${Object.entries(Catppuccin)
+    .map(([key, value]) => `--catppuccin-${key.toLowerCase()}: ${value};`)
+    .join(" ")}
 }
 
 /*
