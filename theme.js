@@ -43,8 +43,8 @@ api.Visual.style("cursor", `background-color: ${Catppuccin.Blue};`);
 
 // https://github.com/brookhong/Surfingkeys/blob/master/docs/API.md#hintsstyle
 const styles = `
-  background: ${Catppuccin.Maroon} none;
-  border: solid 1px ${Catppuccin.Red};
+  background: ${Catppuccin.Yellow} none;
+  border: solid 1px ${Catppuccin.Peach};
   color: ${Catppuccin.Crust};
   font-family: "JetBrains Mono";
   padding: 2px;
