@@ -46,7 +46,7 @@ const styles = `
   background: ${Catppuccin.Teal} none;
   border: solid 1px ${Catppuccin.Blue};
   color: ${Catppuccin.Crust};
-  font-family: "JetBrains Mono";
+  font: bold 0.75rem "JetBrains Mono";
   padding: 2px;
   text-transform: lowercase;
 `;
@@ -151,7 +151,7 @@ settings.theme = `
 
 #sk_keystroke {
   background-color: var(--catppuccin-base);
-  color: var(--catppuccin-pink);
+  color: var(--catppuccin-green);
 }
 
 .expandRichHints kbd > .candidates {
