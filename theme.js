@@ -8,8 +8,8 @@ api.iunmap(":");
 /* Order: left-right hand, inside-out, home-bottom-top-row. */
 api.Hints.setCharacters("fdsajklghvcxzmbnuioprewqty");
 
-// Flavor: Mocha
 const Catppuccin = {
+	// Flavor: Mocha
 	Base: "#1e1e2e",
 	Blue: "#89b4fa",
 	Crust: "#11111b",
@@ -57,6 +57,9 @@ api.Hints.style(
    div.begin { color: ${Catppuccin.Crust}; }`,
 	"text",
 );
+
+/* List of pages to block. */
+settings.blocklistPattern = /docs.google.com/;
 
 /* Always use the omnibar when switching tabs. */
 settings.tabsThreshold = 0;
